@@ -9,6 +9,10 @@ NAMESPACE=$(kubectl get svc mysql-service -o jsonpath='{.metadata.namespace}')
 DNS="$SERVICE_NAME.$NAMESPACE.svc.cluster.local"
 echo $DNS
 ```
+## DNS format for a service
+```
+<service-name>.<namespace>.svc.cluster.local
+```
 # Mysql Pod
 - db-cm
 ```
