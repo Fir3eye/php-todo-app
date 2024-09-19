@@ -2,6 +2,13 @@
 ## Output
 ![image](https://github.com/user-attachments/assets/6c5b5464-d7b8-446e-afcb-f25804bcff69)
 
+# Get DNS of a Service Programmatically
+```
+SERVICE_NAME=$(kubectl get svc mysql-service -o jsonpath='{.metadata.name}')
+NAMESPACE=$(kubectl get svc mysql-service -o jsonpath='{.metadata.namespace}')
+DNS="$SERVICE_NAME.$NAMESPACE.svc.cluster.local"
+echo $DNS
+```
 # Mysql Pod
 - db-cm
 ```
