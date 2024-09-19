@@ -52,7 +52,7 @@ kubectl run phpadmin-pod --image=phpmyadmin --dry-run=client -o yaml > phpadmin-
 ```
 kubectl expose pod phpadmin-pod --type=NodePort --port=8090 --target-port=80 --name=phpadmin-svc --dry-run=client -o yaml > phpadmin-svc.yaml
 ```
-# Applocation Pod
+# Application Pod
 - phpapp-pod
 ```
 kubectl run phpapp-pod --image=fir3eye/php-app:v1 --dry-run=client -o yaml > phpapp-pod.yaml
